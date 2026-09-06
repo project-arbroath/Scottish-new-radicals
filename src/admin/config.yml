@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity + Git Gateway must be enabled in the Netlify site dashboard
+# (Site settings > Identity) before this admin panel can authenticate —
+# same setup already used on Project Arbroath / End the Union.
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/faq"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "question"
+    fields:
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "text" }
+      - {
+          label: "Order",
+          name: "order",
+          widget: "number",
+          required: false,
+          hint: "Optional — lower numbers show first. Leave blank to sort alphabetically after ordered entries.",
+        }

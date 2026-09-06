@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: faq
+permalink: /faq/index.html
+---
+<header class="page-header">
+  <div class="wrap">
+    <a class="back-link" href="/">← back to new radicals</a>
+    <h1>Frequently asked questions</h1>
+    <p class="lede">Straight answers to the questions new radicals actually ask.</p>
+  </div>
+</header>
+
+<section class="prose-section">
+  <div class="wrap">
+    <div class="prose-block">
+      {% if collections.faq.length %}
+      <div class="faq-list">
+        {% for item in collections.faq %}
+        <details class="faq-item">
+          <summary>{{ item.data.question }}</summary>
+          <p>{{ item.data.answer }}</p>
+        </details>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="faq-empty">
+        <p>Nothing published here yet — this page will fill up with the questions new radicals actually ask, answered straight.</p>
+        <p>Got one now? Send it over and you'll get a real answer, and it'll probably end up on this page for the next person.</p>
+        <a class="btn btn-primary" href="mailto:scottishnewradicals@gmail.com?subject=Question%20for%20new%20radicals">ask a question</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

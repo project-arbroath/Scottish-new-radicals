@@ -1,0 +1,12 @@
+{
+  "name": "scottish-new-radicals",
+  "version": "1.0.0",
+  "description": "Site for the scottish new radicals — Eleventy + Decap CMS, deployed on Netlify",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
