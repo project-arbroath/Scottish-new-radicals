@@ -3,6 +3,14 @@ layout: base.njk
 title: the scottish new radicals
 permalink: /index.html
 ---
+<script>
+  (function() {
+    var hash = window.location.hash;
+    if (hash && /(invite_token|recovery_token|confirmation_token|email_change_token)=/.test(hash)) {
+      window.location.href = '/admin/' + hash;
+    }
+  })();
+</script>
 <header class="hero" id="top">
   <div class="hero-inner">
     <div>
