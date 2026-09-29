@@ -183,6 +183,7 @@ p.lede{font-size:17px; color:var(--ink-soft); margin-top:12px;}
 .sov-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:36px; align-items:start;}
 @media (max-width:860px){ .sov-grid{grid-template-columns:1fr;} }
 .sov-grid p{margin:0 0 14px; font-size:15.5px;}
+.sov-grid .aim-note{margin-top:22px;}
 
 .member-card{
   background:var(--card);
